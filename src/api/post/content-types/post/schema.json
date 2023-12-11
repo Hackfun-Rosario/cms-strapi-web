@@ -32,8 +32,15 @@
         "audios"
       ]
     },
-    "fecha": {
-      "type": "date"
+    "categoria": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::categoria.categoria",
+      "inversedBy": "posts"
+    },
+    "showHome": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
